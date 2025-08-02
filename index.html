@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khan Academy Stylish Landing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hide mobile menu by default */
+    #mobile-menu {
+      display: none;
+    }
+    
+    /* Show mobile menu when checkbox is checked */
+    #menu-toggle:checked ~ #mobile-menu {
+      display: block;
+    }
+    
+    /* Hamburger menu animation */
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #4b5563;
+      transition: all 0.3s ease;
+    }
+    
+    .hamburger span:nth-child(1) {
+      transform-origin: 0% 0%;
+    }
+    
+    .hamburger span:nth-child(3) {
+      transform-origin: 0% 100%;
+    }
+    
+    #menu-toggle:checked ~ .hamburger span:nth-child(1) {
+      transform: rotate(45deg) translate(1px, -1px);
+    }
+    
+    #menu-toggle:checked ~ .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    #menu-toggle:checked ~ .hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translate(1px, 1px);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <header class="bg-white border-b relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img src="./rasmlar/logo.png" alt="Khan Academy Logo" class="h-10">
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex gap-6 text-base text-gray-700">
+        <a href="#" class="hover:text-blue-600 transition-colors duration-200">Asosiy</a>
+        <a href="#" class="hover:text-blue-600 transition-colors duration-200">Kurslarimiz</a>
+        <a href="#" class="hover:text-blue-600 transition-colors duration-200">Blog</a>
+        <a href="#" class="hover:text-blue-600 transition-colors duration-200">Biz haqimizda</a>
+        <a href="#" class="hover:text-blue-600 transition-colors duration-200">Bog'lanish</a>
+      </nav>
+      
+      <!-- Desktop Buttons -->
+      <div class="hidden lg:flex items-center gap-4">
+        <select class="border rounded px-3 py-1 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <option>EN</option>
+          <option>UZ</option>
+          <option>RU</option>
+        </select>
+        <button class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition-colors duration-200 flex items-center gap-1">
+          Kirish <span class="text-lg">→</span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Toggle (hidden checkbox) -->
+      <input type="checkbox" id="menu-toggle" class="hidden">
+      
+      <!-- Mobile Menu Button (hamburger) -->
+      <label for="menu-toggle" class="lg:hidden hamburger flex flex-col justify-center items-center w-6 h-6 cursor-pointer">
+        <span class="mb-1.5"></span>
+        <span class="mb-1.5"></span>
+        <span></span>
+      </label>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden bg-white border-t">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors duration-200">Asosiy</a>
+        <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors duration-200">Kurslarimiz</a>
+        <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors duration-200">Blog</a>
+        <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors duration-200">Biz haqimizda</a>
+        <a href="#" class="block py-2 px-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors duration-200">Bog'lanish</a>
+        
+        <div class="pt-2 space-y-3">
+          <select class="w-full border rounded px-3 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>EN</option>
+            <option>UZ</option>
+            <option>RU</option>
+          </select>
+          <button class="w-full bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-1">
+            Kirish <span class="text-lg">→</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Rest of your content -->
+  <main>
+    <!-- Hero section and other content -->
+  </main>
+  <!-- Hero Section -->
+  <section class="py-20 text-center px-6">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+        <span class="text-blue-600">Dasturlashni</span> biz bilan qulay<br />muhitda o'rganing
+      </h1>
+      <p class="mt-4 text-gray-500 max-w-3xl mx-auto text-lg">
+        Khan Academy — bu siz izlagan akademiya. Juda qisqa vaqt ichida dasturlashda Junior darajasiga chiqasiz!
+      </p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">Boshlash →</a>
+        <a href="#" class="bg-gray-100 px-6 py-3 rounded-lg flex items-center gap-2 hover:bg-gray-200 transition">
+          <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="mt-6 inline-block bg-green-50 text-green-700 text-sm px-4 py-2 rounded">
+        <img src="./rasmlar/award.png" alt="Award" class="h-6">
+      </div>
+    </div>
+  </section>
+
+  <!-- Video + Card Section -->
+ <section class="py-20 px-6">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div class="relative flex gap-6">
+      <!-- Main Image -->
+      <div class="w-3/4">
+        <img src="./rasmlar/image.png" alt="Video placeholder" class="w-full rounded-lg shadow-lg">
+      </div>
+      <!-- Card Image positioned to the right -->
+      <div class="w-1/4 self-end mb-10">
+        <img src="./rasmlar/card.png" alt="Info card" class="w-full rounded-lg shadow-lg">
+      </div>
+    </div>
+    <div class="space-y-4">
+      <h2 class="text-3xl font-bold text-blue-600">Kam vaqtda ko'proq o'rganish</h2>
+      <p class="text-gray-700 leading-relaxed">
+        Khan akademiyasida juda qisqa muddatda siz istagan dasturlash yo'nalishida Junior darajasiga erishasiz.
+      </p>
+      <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+        Batafsil →
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- Features Section -->
+  <section class="bg-gray-50 py-20 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Bizning ustun jihatlarimiz</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl mx-auto">
+        Quyida siz uchun ajratilgan afzalliklar keltirilgan.
+      </p>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="./rasmlar/icon (3).png" alt="Icon" class="h-12 mb-4 mx-auto">
+          <h3 class="font-semibold text-xl text-blue-600 mb-2">Kuchli Mentorlar</h3>
+          <p class="text-gray-600">Webbrain UI standartlariga qat'iy rioya qilinadi.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="./rasmlar/icon (2).png" alt="Icon" class="h-12 mb-4 mx-auto">
+          <h3 class="font-semibold text-xl text-blue-600 mb-2">Muntazam o'rganish</h3>
+          <p class="text-gray-600">Reja asosida doimiy bilim oling.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="./rasmlar/icon.png" alt="Icon" class="h-12 mb-4 mx-auto">
+          <h3 class="font-semibold text-xl text-blue-600 mb-2">Quvnoq muhit</h3>
+          <p class="text-gray-600">Oson va yoqimli o'rganish muhiti.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="./rasmlar/icon.png" alt="Icon" class="h-12 mb-4 mx-auto">
+          <h3 class="font-semibold text-xl text-blue-600 mb-2">Intensiv Darslar</h3>
+          <p class="text-gray-600">Qisqa muddat ichida ko'rish.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="./rasmlar/icon.png" alt="Icon" class="h-12 mb-4 mx-auto">
+          <h3 class="font-semibold text-xl text-blue-600 mb-2">Ahil Jamoa</h3>
+          <p class="text-gray-600">Qo'llab-quvvat jamoasi.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <img src="./rasmlar/icon.png" alt="Icon" class="h-12 mb-4 mx-auto">
+          <h3 class="font-semibold text-xl text-blue-600 mb-2">Amaliy Darslar</h3>
+          <p class="text-gray-600">Real loyihalar bilan o'rganasiz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="py-20 px-6">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">Kelajagingizni Khan Academy bilan quring</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-6">
+        A collection of websites and projects built with Webbrain UI
+      </p>
+      <button class="text-blue-600 font-medium hover:text-blue-700 transition">
+        Ko'proq ko'rish →
+      </button>
+    </div>
+    <div class="max-w-screen-lg mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <img src="./rasmlar/image 1.png" alt="Project 1" class="rounded-lg shadow hover:shadow-lg transition">
+      <img src="./rasmlar/image 2.png" alt="Project 2" class="rounded-lg shadow hover:shadow-lg transition">
+      <img src="./rasmlar/image 3.png" alt="Project 3" class="rounded-lg shadow hover:shadow-lg transition">
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 px-6 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-2">Shiddat bilan o'qiyotgan</h2>
+        <h3 class="text-xl opacity-90">Khan Academy</h3>
+      </div>
+      <p class="max-w-2xl mb-12 opacity-90">We're dedicated to improving the experience and performance of Webbrain UI</p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex items-start gap-3">
+          <div>
+            <p class="text-3xl font-bold">1.2M</p>
+            <p class="text-sm opacity-80">Download per month</p>
+          </div>
+          <img src="./rasmlar/fi_log-in.png" alt="Icon" class="h-8 mt-1">
+        </div>
+        <div class="flex items-start gap-3">
+          <div>
+            <p class="text-3xl font-bold">25.1K</p>
+            <p class="text-sm opacity-80">GitHub stars</p>
+          </div>
+          <img src="./rasmlar/fi_github.png" alt="Icon" class="h-8 mt-1">
+        </div>
+        <div class="flex items-start gap-3">
+          <div>
+            <p class="text-3xl font-bold">14</p>
+            <p class="text-sm opacity-80">Core contributors</p>
+          </div>
+          <img src="./rasmlar/fi_users.png" alt="Icon" class="h-8 mt-1">
+        </div>
+        <div class="flex items-start gap-3">
+          <div>
+            <p class="text-3xl font-bold">6.2K</p>
+            <p class="text-sm opacity-80">Discord members</p>
+          </div>
+          <img src="./rasmlar/surat.png" alt="Icon" class="h-8 mt-1">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="bg-gray-50 py-16 px-6">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-3xl font-bold">Bizning professional jamoamiz</h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-6">
+        A collection of websites and projects built with Webbrain UI
+      </p>
+      <button class="text-blue-600 font-medium hover:text-blue-700 transition">
+        Ko'proq ko'rish →
+      </button>
+    </div>
+    <div class="max-w-screen-md mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition">
+        <img src="./rasmlar/member 1.png" alt="Team member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover">
+        <h3 class="font-semibold">Cameron Williamson</h3>
+        <p class="text-sm text-gray-500">Backend Developer</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition">
+        <img src="./rasmlar/member 2.png" alt="Team member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover">
+        <h3 class="font-semibold">Brooklyn Simmons</h3>
+        <p class="text-sm text-gray-500">Frontend Developer</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition">
+        <img src="./rasmlar/member 3.png" alt="Team member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover">
+        <h3 class="font-semibold">Savannah Nguyen</h3>
+        <p class="text-sm text-gray-500">UX/UI Designer</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow text-center hover:shadow-lg transition">
+        <img src="./rasmlar/member 4.png" alt="Team member" class="mx-auto mb-4 rounded-full w-32 h-32 object-cover">
+        <h3 class="font-semibold">Darlene Robertson</h3>
+        <p class="text-sm text-gray-500">Copywriter</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors Section -->
+  <section class="py-16 px-6">
+    <div class="max-w-7xl mx-auto text-center mb-8">
+      <h2 class="text-2xl font-bold">Hamkorlik qilishga tayyormisiz?</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Our maintainers devote their time, effort, and heart...
+      </p>
+    </div>
+    <div class="flex flex-wrap justify-center items-center gap-6 mb-8">
+      <img src="./rasmlar/card 1.png" alt="Sponsor card" class="h-12">
+      <img src="./rasmlar/card 1.png" alt="Sponsor card" class="h-12">
+    </div>
+    <div class="mb-6 text-center text-gray-500 text-sm">
+      ORGANIZATION SPONSORS
+    </div>
+    <div class="flex justify-center flex-wrap items-center gap-10 mb-8">
+      <img src="./rasmlar/1.png" alt="Sponsor logo" class="h-12">
+      <img src="./rasmlar/1.png" alt="Sponsor logo" class="h-12">
+      <img src="./rasmlar/1.png" alt="Sponsor logo" class="h-12">
+      <img src="./rasmlar/1.png" alt="Sponsor logo" class="h-12">
+      <img src="./rasmlar/1.png" alt="Sponsor logo" class="h-12">
+      <img src="./rasmlar/1.png" alt="Sponsor logo" class="h-12">
+    </div>
+    <div class="mb-6 text-center text-gray-500 text-sm">
+      INDIVIDUAL SPONSORS
+    </div>
+    <div class="flex justify-center gap-6 flex-wrap">
+      <img src="./rasmlar/avatar.png" alt="Sponsor" class="h-10 rounded-full">
+      <img src="./rasmlar/avatar (1).png" alt="Sponsor" class="h-10 rounded-full">
+      <img src="./rasmlar/avatar (2).png" alt="Sponsor" class="h-10 rounded-full">
+      <img src="./rasmlar/avatar (3).png" alt="Sponsor" class="h-10 rounded-full">
+      <img src="./rasmlar/avatar (4).png" alt="Sponsor" class="h-10 rounded-full">
+      <img src="./rasmlar/avatar (5).png" alt="Sponsor" class="h-10 rounded-full">
+    </div>
+  </section>
+
+  <!-- Premium Components Section -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">PREMIUM COMPONENTS</h2>
+        <h3 class="text-xl text-gray-600">Bizning loyihalar</h3>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-gray-600 mb-6">Beautiful and responsive React components to build your application or marketing pages quicker.</p>
+          <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+            Batafsil →
+          </a>
+        </div>
+        <div class="bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-lg">
+          <div class="flex gap-4">
+            <img src="./rasmlar/1 (1).png" alt="Component" class="w-1/3">
+            <img src="./rasmlar/2.png" alt="Component" class="w-1/3">
+            <img src="./rasmlar/3.png" alt="Component" class="w-1/3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-6">Biz kuchliarni tayyorlaymiz!</h1>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+        Beautiful and responsive React components to build your application or marketing pages quicker.
+      </p>
+      <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        Biz hadimizda →
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <div class="mb-4">
+        <img src="./rasmlar/akar-icons_discord-fill.png" alt="Discord" class="h-12 mx-auto">
+      </div>
+      <h2 class="text-2xl font-bold mb-2">Biz bilan bog'lanish</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+        Feel free to ask questions, reports, issues and meet new people
+      </p>
+      <div class="flex justify-center">
+        <img src="./rasmlar/primary button.png" alt="Join button" class="h-12">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-12 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-5 gap-8">
+      <!-- Khan Academy Info -->
+      <div>
+        <div class="mb-4">
+          <img src="./rasmlar/logo.png" alt="Khan Academy" class="h-10">
+        </div>
+        <p class="text-gray-300 text-sm mb-4">Istiklal street, Tashkent, Uzbekistan, 200136</p>
+        <div class="flex gap-4">
+          <img src="./rasmlar/socials.png" alt="Social media" class="h-6">
+        </div>
+      </div>
+
+      <!-- Support Column -->
+      <div>
+        <h3 class="font-bold mb-4">Support</h3>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li><a href="#" class="hover:text-white transition">Team</a></li>
+          <li><a href="#" class="hover:text-white transition">Careers</a></li>
+          <li><a href="#" class="hover:text-white transition">Blog</a></li>
+          <li><a href="#" class="hover:text-white transition">Security</a></li>
+        </ul>
+      </div>
+
+      <!-- Product Column -->
+      <div>
+        <h3 class="font-bold mb-4">Product</h3>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li><a href="#" class="hover:text-white transition">Clinical Board</a></li>
+          <li><a href="#" class="hover:text-white transition">News</a></li>
+          <li><a href="#" class="hover:text-white transition">Events</a></li>
+          <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Security Column -->
+      <div>
+        <h3 class="font-bold mb-4">Security</h3>
+        <ul class="text-gray-300 text-sm space-y-2">
+          <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-white transition">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-white transition">Events</a></li>
+          <li><a href="#" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Subscribe Column -->
+      <div>
+        <h3 class="font-bold mb-4">Subscribe</h3>
+        <p class="text-gray-300 text-sm mb-4">Subscribe to get the latest news from us</p>
+        <div class="relative">
+          <input type="email" placeholder="hello@gmail.com" class="w-full px-4 py-2 rounded-lg text-gray-800">
+          <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-gray-400 text-sm">&copy; 2025 Khan Academy. Barcha huquqlar himoyalangan.</div>
+  </footer>
+
+</body>
+</html>
